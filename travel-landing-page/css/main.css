@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #00a52f;
+}
+
+body {
+  background: #000000;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Bauhaus 93 V2";
+  font-size: 30px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.nav li::before {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  height: 3px;
+  width: 50%;
+  background: var(--primary);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.nav li:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+.nav .booking {
+  background: var(--primary);
+  padding: 8px 18px; /* increased padding */
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.nav .booking::before {
+  display: none; /* remove underline */
+}
+
+.nav .booking a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav .booking a ion-icon {
+  font-size: 1.2em;
+}
+
+.nav .booking:hover {
+  background: #0ee146; /* darker green on hover */
+}
+
+/* make .link anchor match booking button styles */
+.link a {
+  background: var(--primary);
+  padding: 4px 10px; /* smaller padding */
+  border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 0.6em; /* slightly smaller text */
+}
+
+.link a:hover {
+  background: #0ee146;
+}
+
+.menu {
+  display: none;
+  transition: 0.3s;
+}
+.menu ion-icon {
+  color: #ffffff;
+  font-size: 1.8em;
+}
+.menu.active {
+  transform: rotateZ(45deg);
+}
+.nav .booking a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* swiper */
+.swiper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: rgba(236, 231, 231, 0.518);
+}
+
+.nav-mobile {
+  display: none;
+}
+
+/* banner  */
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 900;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(130%);
+}
+
+.banner .shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 950;
+}
+
+.banner .map {
+  position: absolute;
+  left: 75%; /* place at right */
+  top: 70%; /* place at bottom */
+  transform: translate(-50%, -50%); /* center on position */
+  width: 280px; /* smaller fixed size */
+  height: 250px; /* preserve aspect ratio */
+  object-fit: contain;
+  filter: invert(1);
+  opacity: 0.4;
+  z-index: 1000;
+  pointer-events: none;
+  animation: animate 1s linear infinite;
+}
+
+/* gentle pulse animation for the map element */
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* hide map on small devices to avoid covering content */
+@media (max-width: 600px) {
+  .banner .map {
+    display: none;
+  }
+}
+
+.swiper-slide .content-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 50%;
+  height: 100vh;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.swiper-slide .content-right {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.swiper-slide .content-left h1 {
+  font-family: "Bauhaus 93 V2";
+  font-weight: 500;
+  font-size: 5em;
+  letter-spacing: 5px;
+  line-height: 1em;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+  margin-bottom: 0; /* remove vertical offset */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.swiper-slide .content-right h1 {
+  font-family: "Bauhaus 93 V2";
+  font-weight: 500;
+  font-size: 5em;
+  letter-spacing: 5px;
+  line-height: 1em;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+  margin-bottom: 0; /* remove vertical offset */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.swiper-slide .content-left .description {
+  /* keep description in normal flow below heading */
+  position: relative;
+  left: auto;
+  bottom: auto;
+  width: 60%; /* narrower width for smaller line lengths */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px; /* space from heading */
+  z-index: 1100; /* ensure it stays on top */
+}
+
+/* make description text smaller */
+.swiper-slide .content-left .description h3 {
+  font-size: 0.6em; /* even smaller */
+  margin-bottom: 0.3em;
+}
+
+.swiper-slide .content-left .description p {
+  font-size: 0.2em; /* smaller than heading */
+}
+
+.swiper-slide .content-left h3 {
+  font-weight: 500;
+  /* reduced heading size for smaller description */
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+/* paragraph text inside description should also be smaller */
+.swiper-slide .content-left .description p {
+  font-size: 0.4em; /* maintained smaller size */
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+/* lines inside the description are even tinier */
+.swiper-slide .content-left .description .line p {
+  font-size: 0.4em;
+  margin: 0;
+}
+
+/* Gallery View Styles */
+.gallery-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  z-index: 2000;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.gallery-view.active {
+  display: flex;
+}
+
+.gallery-header {
+  position: sticky;
+  top: 0;
+  background: #000000;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2100;
+}
+
+.gallery-header h2 {
+  color: #ffffff;
+  font-size: 2em;
+  margin: 0;
+}
+
+.close-gallery {
+  background: var(--primary);
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.close-gallery:hover {
+  background: #0ee146;
+}
+
+.gallery-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gallery-slide {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-slide img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(130%);
+}
+
+.gallery-slide-content {
+  width: 50%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+.gallery-slide-content h3 {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-slide-content ul {
+  font-size: 1em;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Navigation Styles */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 165, 47, 0.3);
+  z-index: 999;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+.nav-mobile.active {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-mobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.nav-mobile li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-mobile li:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile li a {
+  display: block;
+  padding: 15px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+.nav-mobile li a:hover {
+  background: rgba(0, 165, 47, 0.2);
+  color: var(--primary);
+}
+
+.nav-mobile li:last-child a {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-mobile li:last-child a:hover {
+  background: #0ee146;
+}
+
+@media (max-width: 768px) {
+  .gallery-slide {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .gallery-slide img {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .gallery-slide-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .gallery-header {
+    padding: 20px;
+  }
+
+  /* Show menu button on mobile */
+  .menu {
+    display: block;
+  }
+
+  /* Hide desktop navigation on mobile */
+  .nav {
+    display: none;
+  }
+
+  /* Adjust header padding for mobile */
+  header {
+    padding: 20px 30px;
+  }
+
+  /* Adjust nav-mobile top position for mobile header */
+  .nav-mobile {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-mobile li a {
+    padding: 12px 20px;
+    font-size: 0.85em;
+  }
+
+  /* Adjust gallery for smaller screens */
+  .gallery-slide {
+    min-height: 80vh;
+  }
+}
