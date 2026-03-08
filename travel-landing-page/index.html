@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93+V2"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Traveling landing page</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="logo">journey</a>
+
+      <ul class="nav">
+        <li><a href="#">destination</a></li>
+        <li><a href="#">deals</a></li>
+        <li><a href="#">Special offers</a></li>
+        <li><a href="#">contact up</a></li>
+        <li class="booking">
+          <a href="#">booking <ion-icon name="add-outline"></ion-icon></a>
+        </li>
+      </ul>
+
+      <a href="#" class="menu">
+        <ion-icon name="grid-outline"></ion-icon>
+      </a>
+    </header>
+
+    <div class="nav-mobile">
+      <ul>
+        <li><a href="#">destination</a></li>
+        <li><a href="#">deals</a></li>
+        <li><a href="#">Special offers</a></li>
+        <li><a href="#">contact up</a></li>
+        <li>
+          <a href="#">booking <ion-icon name="add-outline"></ion-icon></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ✅ Swiper OUTSIDE nav-mobile -->
+    <div class="swiper banner-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="banner">
+            <img src="images/thick-forest-5120x2880-14776.jpg" alt="" />
+            <div class="shade"></div>
+            <img src="images/map.png" alt="" class="map" />
+          </div>
+          <div class="content-left">
+            <h1>Austr</h1>
+            <div class="description">
+              <h3>Discover forests</h3>
+              <div class="line">
+                <p>
+                Australia’s forests offer stunning nature and unique wildlife. Visitors can enjoy scenic walking trails, waterfalls, and peaceful natural surroundings perfect for relaxation.
+                </p>
+              </div>
+              <div class="link">
+                <a href="#" class="open-gallery">Start now</a>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <h1>alia</h1>
+          </div>
+        </div>
+
+        <!-- Great Barrier Reef Slider -->
+        <div class="swiper-slide">
+          <div class="banner">
+            <img src="images/1722138.jpg" alt="Sifnos, Greece" />
+            <div class="shade"></div>
+          </div>
+          <div class="content-left">
+            <h1>Austr</h1>
+            <div class="description">
+              <h3>Discover city</h3>
+              <div class="line">
+                <p>
+                  Australian cities like Sydney and Melbourne combine modern skylines, beautiful beaches, and world-class dining, offering a vibrant yet relaxed coastal lifestyle.
+                </p>
+              </div>
+              <div class="link">
+                <a href="#" class="open-gallery">Start now</a>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <h1>alia</h1>
+          </div>
+        </div>
+        <!-- Rain forests slider -->
+        <div class="swiper-slide">
+          <div class="banner">
+            <img
+              src="images/amsterdam-aesthetic-5120x3364-18759.jpg"
+              alt="Tanjung Aru Resort, Kota Kinabalu, Malaysia"
+            />
+            <div class="shade"></div>
+          </div>
+          <div class="content-left">
+            <h1>Austr</h1>
+            <div class="description">
+              <h3>Discover lakes</h3>
+              <div class="line">
+                <p>
+                  Australia’s lakes, from the pink waters of Lake Hillier to the
+                  vast salt flats of Lake Eyre, offer striking natural beauty
+                  and unique landscapes for travelers to explore.
+                </p>
+              </div>
+              <div class="link">
+                <a href="#" class="open-gallery">Start now</a>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <h1>alia</h1>
+          </div>
+        </div>
+        <!-- Palm cove slider -->
+        <div class="swiper-slide">
+          <div class="banner">
+            <img src="images/2561163.jpg" alt="" />
+            <div class="shade"></div>
+          </div>
+          <div class="content-left">
+            <h1>Austr</h1>
+            <div class="description">
+              <h3>Discover beaches</h3>
+              <div class="line">
+                <p>
+                  Australia’s beaches, from the iconic Bondi Beach to the
+                  pristine shores of Whitehaven Beach, offer stunning coastal
+                  beauty and vibrant beach culture for travelers to enjoy.
+                </p>
+              </div>
+              <div class="link">
+                <a href="#" class="open-gallery">Start now</a>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <h1>alia</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="control">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- Gallery View - All Slides Stacked Vertically -->
+    <div id="gallery-view" class="gallery-view">
+      <div class="gallery-header">
+        <button class="close-gallery">&times;</button>
+        <h2>Gallery</h2>
+      </div>
+
+      <div class="gallery-content">
+        <!-- Slide 1 -->
+        <div class="gallery-slide">
+          <img
+            src="images/thick-forest-5120x2880-14776.jpg"
+            alt="Discover Forests"
+          />
+          <div class="gallery-slide-content">
+            <h3>Discover forests</h3>
+            <ul>
+             <li>Diverse landscapes from Tasmania’s cool temperate forests to the tropical Daintree Rainforest — 4.8/5</li>
+             <li>Home to unique wildlife like koalas, cassowaries, and rare native species — 4.9/5</li>
+             <li>Scenic walking trails, waterfalls, and breathtaking natural views — 4.7/5</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="gallery-slide">
+          <img src="images/1722138.jpg" alt="Discover City" />
+          <div class="gallery-slide-content">
+            <h3>Discover city</h3>
+            <ul>
+             <li>Dynamic cityscapes in Sydney and Melbourne with modern skylines — 4.8/5</li> 
+             <li>Beautiful beaches paired with vibrant arts, culture, and entertainment scenes — 4.7/5</li>
+             <li>Diverse, world-class dining offering flavors from around the globe — 4.9/5</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="gallery-slide">
+          <img
+            src="images/amsterdam-aesthetic-5120x3364-18759.jpg"
+            alt="Discover Lakes"
+          />
+          <div class="gallery-slide-content">
+            <h3>Discover lakes</h3>
+            <ul>
+              <li>Stunning pink waters of Lake Hillier offering a rare natural spectacle — 4.8/5</li>
+              <li>Expansive salt flats of Lake Eyre creating dramatic desert landscapes — 4.7/5</li>
+              <li>Unique scenery and peaceful surroundings ideal for exploration and photography — 4.6/5</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="gallery-slide">
+          <img src="images/2561163.jpg" alt="Discover Beaches" />
+          <div class="gallery-slide-content">
+            <h3>Discover beaches</h3>
+            <ul>
+              <li>Iconic surf and lively atmosphere at Bondi Beach — 4.8/5</li>
+              <li>Pristine white sands and crystal-clear waters at Whitehaven Beach — 4.9/5</li>
+              <li>Stunning coastal views and vibrant beach culture perfect for relaxation and adventure — 4.7/5</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
